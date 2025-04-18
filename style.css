@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+}
+.titlebar {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  align-items: center;
+}
+.titlebar img {
+  width: 5%;
+  filter: invert(100%);
+  padding: 1.5%;
+}
+.titlebar .option {
+  color: #fff;
+  font-size: 3vw;
+  padding: 1%;
+  font-family: Montserrat;
+  font-weight: 400;
+  background: linear-gradient(currentColor 0 0) bottom center/
+    var(--underline-width, 0%) 0.05em no-repeat;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-size 0.5s;
+  cursor: pointer;
+}
+
+.titlebar .currentOption {
+  color: #fff;
+  font-size: 3vw;
+  padding: 1%;
+  font-family: Montserrat;
+  font-weight: 400;
+  background: linear-gradient(currentColor 0 0) bottom center/
+    var(--underline-width, 10%) 0.05em no-repeat;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-size 0.5s;
+  cursor: pointer;
+}
+
+.titlebar a:hover {
+  --underline-width: 100%;
+}
