@@ -13,14 +13,18 @@ body {
   width: 100%;
   justify-content: left;
   align-items: center;
-  position:sticky;
-  top:0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 8vw;
+  user-select: none;
 }
 .titlebar img {
   width: 5%;
   padding: 1.5%;
   transition: 0.3s;
   filter: drop-shadow(0 0 0.5vw #000000);
+  pointer-events: none;
 }
 .titlebar .option {
   color: #fff;
@@ -53,23 +57,26 @@ body {
 .titlebar a:hover {
   --underline-width: 100%;
 }
-
+.bigParent {
+  display: flex;
+  justify-content: center;
+}
+.blank {
+  width: 15%;
+  background-color: #dedede;
+  z-index: 500;
+}
 .parent {
   background-color: #ffffff00;
-  width: 100%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2.5% 0;
 }
 
 .main {
   background-color: #eee;
-  width: 70%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 0.5vw;
+  width: 100%;
 }
 
 .header {
@@ -80,8 +87,54 @@ body {
 }
 .content {
   width: 95%;
-  text-align:justify;
-  font-size:1.5vw;
-  padding:2%;
-  padding-top:1%;
+  text-align: justify;
+  font-size: 1.5vw;
+  padding: 2%;
+  padding-top: 1%;
+}
+.logo {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  width: 50%;
+  opacity: 0.068;
+  pointer-events: none;
+  user-select: none;
+}
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+.logoText {
+  font-size: 11vw;
+  font-family: Montserrat;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  line-height: 0.6;
+  padding-top: 4%;
+  background-color: #ff7e32;
+  color: #fff;
+  text-shadow: 0 0 1vw #00000090;
+  z-index: 550;
+  letter-spacing: -0.5vw;
+}
+.logoSubtitle {
+  font-size: 4vw;
+  font-family: Merriweather;
+  font-weight: 300;
+  letter-spacing: 0.5vw;
+  width: 100%;
+  text-align: center;
+  color: #ff7e32;
+  z-index: 0;
+  background-color: #000;
+}
+.main .content {
+  text-align: justify;
+  width:100%;
+  margin:0;
+  padding:0;
 }
